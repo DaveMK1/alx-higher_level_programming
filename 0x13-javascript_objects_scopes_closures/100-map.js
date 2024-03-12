@@ -1,7 +1,4 @@
 #!/usr/bin/node
-
-let fs = require('fs');
-
-let file1 = fs.readFileSync(process.argv[2], 'utf8');
-let file2 = fs.readFileSync(process.argv[3], 'utf8');
-fs.writeFileSync(process.argv[4], file1 + file2);
+const list = require('./100-data.js').list;
+console.log(list);
+console.log(list.map((item, index) => item * index));
